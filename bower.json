@@ -1,6 +1,6 @@
 {
   "name": "sofa-storages",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://www.sofa.io",
   "authors": [
     "Pascal Precht <pascal@couchcommerce.com>"
@@ -8,7 +8,7 @@
   "description": "Sofa Web SDK storages component.",
   "main": "dist/sofa.storages.js",
   "dependencies": {
-    "sofa-core": "0.1.2"
+    "sofa-core": "0.1.3"
   },
   "keywords": [
     "sofa",
