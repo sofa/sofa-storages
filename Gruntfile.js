@@ -119,8 +119,11 @@ module.exports = function (grunt) {
         concat: {
             compile_js: {
                 src: [
+                    'src/store.js',
+                    'component.prefix',
                     'src/**/*.js',
                     '<%= html2js.src.dest %>',
+                    'component.suffix'
                 ],
                 dest: '<%= build_dir %>/<%= component_name %>.js'
             },
