@@ -1,6 +1,6 @@
 {
   "name": "sofa-storages",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sofa Web SDK storage component.",
   "main": "dist/sofa.storages.js",
   "scripts": {
