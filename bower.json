@@ -8,7 +8,7 @@
   "description": "Sofa Web SDK storages component.",
   "main": "dist/sofa.storages.js",
   "dependencies": {
-    "sofa-core": "0.1.3"
+    "sofa-core": "0.1.x"
   },
   "keywords": [
     "sofa",
