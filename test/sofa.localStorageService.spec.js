@@ -30,6 +30,10 @@ describe('sofa.storages', function () {
             expect(localStorageService.remove).toBeDefined();
         });
 
+        it('should have a method clear', function () {
+            expect(localStorageService.clear).toBeDefined();
+        });
+
         describe('sofa.LocalStorageService#set', function () {
 
             it('should be a function', function () {
@@ -64,6 +68,20 @@ describe('sofa.storages', function () {
                 localStorageService.set('foo', 'bar');
                 expect(localStorageService.get('foo')).toEqual('bar');
                 localStorageService.remove('foo');
+                expect(localStorageService.get('foo')).toBeUndefined();
+            });
+        });
+
+        describe('sofa.LocalStorageService#clear', function () {
+
+            it('should be a function', function () {
+                expect(typeof localStorageService.clear).toBe('function');
+            });
+
+            it('shoul clear storage', function () {
+                localStorageService.set('foo', 'bar');
+                expect(localStorageService.get('foo')).toEqual('bar');
+                localStorageService.clear();
                 expect(localStorageService.get('foo')).toBeUndefined();
             });
         });
