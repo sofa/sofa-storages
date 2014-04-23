@@ -1,8 +1,11 @@
 'use strict';
 /* global sofa */
 /**
- * @name MemoryStorageService
- * @namespace sofa.MemoryStorageService
+ * @sofadoc class
+ * @name sofa.MemoryStorageService
+ * @package sofa-storages
+ * @requiresPackage sofa-core
+ * @distFile dist/sofa.storages.js
  *
  * @description
  * Simple memory storage service. Provides methods to get and set values in form
@@ -13,7 +16,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     var _storage = {};
 
     /**
-     * @method set
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#set
      * @memberof sofa.MemoryStorageService
      *
      * @description
@@ -27,7 +31,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     };
 
     /**
-     * @method get
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#get
      * @memberof sofa.MemoryStorageService
      *
      * @description
@@ -42,7 +47,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     };
 
     /**
-     * @method remove
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#remove
      * @memberof sofa.MemoryStorageService
      *
      * @description
@@ -55,7 +61,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     };
 
     /**
-     * @method clear
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#clear
      * @memberof sofa.MemoryStorageService
      *
      * @description
