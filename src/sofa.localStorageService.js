@@ -2,8 +2,11 @@
 /* global sofa */
 /* global store */
 /**
- * @name LocalStorageService
- * @namespace sofa.LocalStorageService
+ * @sofadoc class
+ * @name sofa.LocalStorageService
+ * @package sofa-storages
+ * @requiresPackage sofa-core
+ * @distFile dist/sofa.storages.js
  *
  * @description
  * We just wrap store.js in a service here.
