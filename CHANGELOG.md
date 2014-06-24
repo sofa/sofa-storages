@@ -1,3 +1,17 @@
+<a name="0.3.0"></a>
+## 0.3.0 (2014-06-24)
+
+
+#### Bug Fixes
+
+* **gitignore:** ignore bower_components ([e2cbdb3f](https://github.com/sofa/sofa-storages/commit/e2cbdb3f1027bba7fa0be3981f8e66971ed06892))
+
+
+#### Features
+
+* **grunt:** better deploying ([c113246e](https://github.com/sofa/sofa-storages/commit/c113246e8b909da5a57810797cf8df5eec4db130))
+
+
 <a name="0.2.3"></a>
 ### 0.2.3 (2014-04-16)
 
