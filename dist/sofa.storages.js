@@ -1,5 +1,5 @@
 /**
- * sofa-storages - v0.3.0 - 2014-06-24
+ * sofa-storages - v0.4.0 - 2014-08-05
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors
@@ -165,8 +165,11 @@
 /* global sofa */
 /* global store */
 /**
- * @name LocalStorageService
- * @namespace sofa.LocalStorageService
+ * @sofadoc class
+ * @name sofa.LocalStorageService
+ * @package sofa-storages
+ * @requiresPackage sofa-core
+ * @distFile dist/sofa.storages.js
  *
  * @description
  * We just wrap store.js in a service here.
@@ -178,8 +181,11 @@ sofa.define('sofa.LocalStorageService', function () {
 'use strict';
 /* global sofa */
 /**
- * @name MemoryStorageService
- * @namespace sofa.MemoryStorageService
+ * @sofadoc class
+ * @name sofa.MemoryStorageService
+ * @package sofa-storages
+ * @requiresPackage sofa-core
+ * @distFile dist/sofa.storages.js
  *
  * @description
  * Simple memory storage service. Provides methods to get and set values in form
@@ -190,7 +196,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     var _storage = {};
 
     /**
-     * @method set
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#set
      * @memberof sofa.MemoryStorageService
      *
      * @description
@@ -204,7 +211,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     };
 
     /**
-     * @method get
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#get
      * @memberof sofa.MemoryStorageService
      *
      * @description
@@ -219,7 +227,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     };
 
     /**
-     * @method remove
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#remove
      * @memberof sofa.MemoryStorageService
      *
      * @description
@@ -232,7 +241,8 @@ sofa.define('sofa.MemoryStorageService', function () {
     };
 
     /**
-     * @method clear
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#clear
      * @memberof sofa.MemoryStorageService
      *
      * @description
