@@ -1,3 +1,11 @@
+## 0.4.0 (2015-02-06)
+
+
+#### Features
+
+* **sofa.storages:** new build process and Angular services ([bfdabf23](https://github.com/sofa/sofa-storages/commit/bfdabf23b117706a09e17b347a597d274cd8bf8c))
+
+
 <a name="0.4.0"></a>
 ## 0.4.0 (2014-08-05)
 
