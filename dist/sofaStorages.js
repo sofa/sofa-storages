@@ -1,11 +1,112 @@
 /**
- * sofa-storages - v0.4.0 - 2014-08-05
+ * sofa-storages - v0.4.0 - Fri Feb 06 2015 16:32:15 GMT+0100 (CET)
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors
- * THIS SOFTWARE CONTAINS COMPONENTS OF THE SOFA.IO COUCHCOMMERCE SDK (WWW.SOFA.IO).
+ * THIS SOFTWARE CONTAINS COMPONENTS OF THE SOFA.IO COUCHCOMMERCE SDK (WWW.SOFA.IO)
  * IT IS PROVIDED UNDER THE LICENSE TERMS OF THE ATTACHED LICENSE.TXT.
  */
+;(function (sofa, document, undefined) {
+'use strict';
+/* global sofa */
+/* global store */
+/**
+ * @sofadoc class
+ * @name sofa.LocalStorageService
+ * @package sofa-storages
+ * @requiresPackage sofa-core
+ * @distFile dist/sofa.storages.js
+ *
+ * @description
+ * We just wrap store.js in a service here.
+ */
+sofa.define('sofa.LocalStorageService', function () {
+    return store;
+});
+
+'use strict';
+/* global sofa */
+/**
+ * @sofadoc class
+ * @name sofa.MemoryStorageService
+ * @package sofa-storages
+ * @requiresPackage sofa-core
+ * @distFile dist/sofa.storages.js
+ *
+ * @description
+ * Simple memory storage service. Provides methods to get and set values in form
+ * of simple key - value pairs.
+ */
+sofa.define('sofa.MemoryStorageService', function () {
+
+    var _storage = {};
+
+    /**
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#set
+     * @memberof sofa.MemoryStorageService
+     *
+     * @description
+     * Sets a value by a given id.
+     *
+     * @param {string} id Identifier
+     * @param {object} data Any kind of data to store under given id.
+     */
+    var set = function (id, data) {
+        _storage[id] = data;
+    };
+
+    /**
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#get
+     * @memberof sofa.MemoryStorageService
+     *
+     * @description
+     * Gets a value by a given id.
+     *
+     * @param {string} id Identifier
+     *
+     * @return {object} Stored data.
+     */
+    var get = function (id) {
+        return _storage[id];
+    };
+
+    /**
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#remove
+     * @memberof sofa.MemoryStorageService
+     *
+     * @description
+     * Removes a value by a given id.
+     *
+     * @param {string} id Identifier
+     */
+    var remove = function (id) {
+        delete _storage[id];
+    };
+
+    /**
+     * @sofadoc method
+     * @name sofa.MemoryStorageService#clear
+     * @memberof sofa.MemoryStorageService
+     *
+     * @description
+     * Clear memory storage.
+     */
+    var clear = function () {
+        _storage = {};
+    };
+
+    return {
+        set: set,
+        get: get,
+        remove: remove,
+        clear: clear
+    };
+});
+
+/* jshint ignore: start */
 ;(function(){
     var store = {},
         win = window,
@@ -159,105 +260,5 @@
     else if (typeof define === 'function' && define.amd) { define(store) }
     else { this.store = store }
 })();
-;(function (sofa, undefined) {
-
-'use strict';
-/* global sofa */
-/* global store */
-/**
- * @sofadoc class
- * @name sofa.LocalStorageService
- * @package sofa-storages
- * @requiresPackage sofa-core
- * @distFile dist/sofa.storages.js
- *
- * @description
- * We just wrap store.js in a service here.
- */
-sofa.define('sofa.LocalStorageService', function () {
-    return store;
-});
-
-'use strict';
-/* global sofa */
-/**
- * @sofadoc class
- * @name sofa.MemoryStorageService
- * @package sofa-storages
- * @requiresPackage sofa-core
- * @distFile dist/sofa.storages.js
- *
- * @description
- * Simple memory storage service. Provides methods to get and set values in form
- * of simple key - value pairs.
- */
-sofa.define('sofa.MemoryStorageService', function () {
-
-    var _storage = {};
-
-    /**
-     * @sofadoc method
-     * @name sofa.MemoryStorageService#set
-     * @memberof sofa.MemoryStorageService
-     *
-     * @description
-     * Sets a value by a given id.
-     *
-     * @param {string} id Identifier
-     * @param {object} data Any kind of data to store under given id.
-     */
-    var set = function (id, data) {
-        _storage[id] = data;
-    };
-
-    /**
-     * @sofadoc method
-     * @name sofa.MemoryStorageService#get
-     * @memberof sofa.MemoryStorageService
-     *
-     * @description
-     * Gets a value by a given id.
-     *
-     * @param {string} id Identifier
-     *
-     * @return {object} Stored data.
-     */
-    var get = function (id) {
-        return _storage[id];
-    };
-
-    /**
-     * @sofadoc method
-     * @name sofa.MemoryStorageService#remove
-     * @memberof sofa.MemoryStorageService
-     *
-     * @description
-     * Removes a value by a given id.
-     *
-     * @param {string} id Identifier
-     */
-    var remove = function (id) {
-        delete _storage[id];
-    };
-
-    /**
-     * @sofadoc method
-     * @name sofa.MemoryStorageService#clear
-     * @memberof sofa.MemoryStorageService
-     *
-     * @description
-     * Clear memory storage.
-     */
-    var clear = function () {
-        _storage = {};
-    };
-
-    return {
-        set: set,
-        get: get,
-        remove: remove,
-        clear: clear
-    };
-});
-
-}(sofa));
+/* jshint ignore: end */
+}(sofa, document));

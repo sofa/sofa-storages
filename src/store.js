@@ -1,3 +1,4 @@
+/* jshint ignore: start */
 ;(function(){
     var store = {},
         win = window,
@@ -151,3 +152,4 @@
     else if (typeof define === 'function' && define.amd) { define(store) }
     else { this.store = store }
 })();
+/* jshint ignore: end */
