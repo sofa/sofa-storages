@@ -1,5 +1,5 @@
 /**
- * sofa-storages - v0.4.0 - Fri Feb 06 2015 16:33:55 GMT+0100 (CET)
+ * sofa-storages - v0.5.0 - Tue Apr 07 2015 12:03:13 GMT+0200 (CEST)
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors

@@ -1,5 +1,5 @@
 /* jshint ignore: start */
-;(function(){
+;(function(root){
     var store = {},
         win = window,
         doc = win.document,
@@ -150,6 +150,6 @@
     store.enabled = !store.disabled
     if (typeof module != 'undefined' && module.exports) { module.exports = store }
     else if (typeof define === 'function' && define.amd) { define(store) }
-    else { this.store = store }
-})();
+    else { root.store = store }
+})(window);
 /* jshint ignore: end */

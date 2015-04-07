@@ -1,5 +1,5 @@
 /**
- * sofa-storages - v0.4.0 - Fri Feb 06 2015 16:33:55 GMT+0100 (CET)
+ * sofa-storages - v0.5.0 - Tue Apr 07 2015 12:03:13 GMT+0200 (CEST)
  * http://www.sofa.io
  *
  * Copyright (c) 2014 CouchCommerce GmbH (http://www.couchcommerce.com / http://www.sofa.io) and other contributors
@@ -107,7 +107,7 @@ sofa.define('sofa.MemoryStorageService', function () {
 });
 
 /* jshint ignore: start */
-;(function(){
+;(function(root){
     var store = {},
         win = window,
         doc = win.document,
@@ -258,7 +258,7 @@ sofa.define('sofa.MemoryStorageService', function () {
     store.enabled = !store.disabled
     if (typeof module != 'undefined' && module.exports) { module.exports = store }
     else if (typeof define === 'function' && define.amd) { define(store) }
-    else { this.store = store }
-})();
+    else { root.store = store }
+})(window);
 /* jshint ignore: end */
 }(sofa, document));
