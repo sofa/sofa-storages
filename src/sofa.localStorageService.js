@@ -1,4 +1,4 @@
-'use strict';
+/* jshint strict: false */
 /* global sofa */
 /* global store */
 /**
